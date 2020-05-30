@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="product">
+      <div class="product-small-img">
+        <img src="img1.png" alt="" onclick="changeFullImage(this)" />
+        <img src="img2.png" alt="" onclick="changeFullImage(this)" />
+        <img src="img3.png" alt="" onclick="changeFullImage(this)" />
+        <img src="img4.png" alt="" onclick="changeFullImage(this)" />
+        <img src="img5.png" alt="" onclick="changeFullImage(this)" />
+      </div>
+      <div class="img-container">
+        <img id="imageBox" src="img1.png" alt="" />
+      </div>
+    </div>
+
+    <script>
+      const changeFullImage = (smallImg) => {
+        const fullImg = document.querySelector('#imageBox');
+        fullImg.src = smallImg.src;
+      };
+    </script>
+  </body>
+</html>
