@@ -9,6 +9,13 @@ body {
   align-items: center;
   min-height: 100vh;
   background: #06181f;
+  flex-direction: column;
+}
+
+body p {
+  color: #fff;
+  font-size: 4em;
+  margin-bottom: 100px;
 }
 
 .container {
