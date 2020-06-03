@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <span class="next" onclick="nextNum();"></span>
+      <span class="prev" onclick="prevNum();"></span>
+      <div class="" id="box"></div>
+    </div>
+
+    <script type="text/javascript">
+      const numbers = document.getElementById('box');
+
+      for (let i = 0; i < 100; i++) {
+        const span = document.createElement('span');
+        span.textContent = i;
+        numbers.appendChild(span);
+      }
+
+      const num = numbers.getElementsByTagName('span');
+      let index = 0;
+
+      const nextNum = () => {
+        num[index].style.display = 'none';
+        index = (index + 1) % num.length;
+        num[index].style.display = 'initial';
+      };
+
+      const prevNum = () => {
+        num[index].style.display = 'none';
+        index = (index - 1 + num.length) % num.length;
+        num[index].style.display = 'initial';
+      };
+    </script>
+  </body>
+</html>
